@@ -34,12 +34,10 @@ def main():
         for i in range(0, h // pix):
             line = ""
             for j in range(0, w // pix):
-                # text = putTTFText(text, SPECTRUM[int((small[i][j] / 256) * 10)], (j*5, i*5), "quinquefive/Quinquefive.ttf", 5)
                 for k in range(0, 5):
                     for l in range(0, 5):
                         if(IMG_SPECTRUM[int((small[i][j] / 256) * 10)][k][l][3] != 0):
                             text[i*5 + k][j*5 + l] = IMG_SPECTRUM[int((small[i][j] / 256) * 10)][k][l]
-                # text[(i*5):(i*5 + 5)][(j*5):(j*5 + 5)] = IMG_SPECTRUM[int((small[i][j] / 256) * 10)]
                 line += SPECTRUM[int((small[i][j] / 256) * 10)]
             f.write(line + "\n")
 
